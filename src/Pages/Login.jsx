@@ -19,7 +19,7 @@ const App = () => {
       console.log("Login Success:", response.data);
       const {data} = response.data;
       if(data){
-
+            localStorage.setItem('user', JSON.stringify(response.data.data)); 
           navigate("/dashboard");
       }else{
         alert('Invalid credentials')
